@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pagina web</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        #contenedor {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            grid-template-rows: auto;
+            grid-template-areas: 
+            "titulo ."
+           "imagen parrafo"
+           "tabla imagen1"
+           "botonA" "botonB"
+           "botonC .";
+        }
+        #parrafo{
+            grid-area:parrafo;
+        }
+        #imagen{
+            grid-area:imagen;
+        }
+        #imagen1{
+            grid-area:imagen1;
+        }
+        #tabla{
+            grid-area:tabla;
+        }
+        #botonCambio{
+            grid-area:botonA;
+        }
+        #botonOculto{
+            grid-area:botonB;
+        }
+        #botonAparecer{
+            grid-area:botonC;
+        }
+
+
+        
+    
+    </style>
+</head>
+<body>
+    <div id="contendedor">
+        <h1 id="titulo">Gustavo Cerati</h1>
+            <p id="parrafo"> <strong>Gustavo Cerati</strong> nació el 11 de agosto de 1959 en Capital Federal, Buenos Aires, Argentina. 
+                Su carrera musical comienza en el año 1983,aunque antes de eso, ya a los nueve años estudiaba guitarra, a los doce conformó 
+                un trío con el cual se presentaba en fiestas particulares, participaba de todos los eventos que se realizaban en el colegio 
+                religioso al que concurría, y llegó a dirigir el coro de la iglesia.
+                Mientras estudiaba tocó en dos bandas: una de rock and roll y blues, y otra de fusión. 
+                A partir del año 1982 los dos músicos comienzan a proyectar la formación de una banda en la que tocarían temas propios. 
+                En ese momento conocen a <strong>Charly Alberti</strong> , y de ahí en más, luego de un período donde prueban distintas formaciones y distintos nombres,
+                 se constituye formalmente <a href="https://es.wikipedia.org/wiki/Soda_Stereo">Soda Stereo</a>. La banda estableció la formación de trío:
+
+                 <strong>Gustavo Cerati</strong> : voz y guitarra,
+                 <strong>Zeta Bosio</strong>: bajo,
+                 <strong>Charly Alberti</strong>:batería. 
+                
+            </p>
+            <table border="1" id="tabla">
+                <tr>
+                    <th>Nombre de nacimiento</th>
+                    <td>Gustavo Adrián Cerati</td>
+                </tr>
+                <tr>
+                    <th>Otros nombres</th>
+                    <td>Gus</td>
+                </tr>
+                <tr>
+                    <th>Nacimiento</th>
+                    <td>11 de Agosto de 1959 Buenos Aires,Argentina</td>
+                </tr>
+                <tr>
+                    <th>Fallecimiento</th>
+                    <td>4 de septiembre de 2014(55 años) Buenos Aires,Argentina</td>
+                </tr>
+                <tr>
+                    <th>Causa de la muerte</th>
+                    <td>Paro cardiorrespiratorio</td>
+                </tr>
+                <tr>
+                    <th>Nacionalidad</th>
+                    <td>Argentina</td>
+                </tr>
+
+            </table>
+            <img src="cerati.jpg" width="300" height="300" id="imagen" >
+            <img src="SodaStereo.jpg" width="400" height="300" id="imagen1">
+            <button id="botonCambio">cambiar</button>
+            <button id="botonOculto">ocultar</button>
+            <button id="botonAparecer">aparecer</button>
+            <script src="archivo.js"></script>
+    </div>
+</body>
+</html>
