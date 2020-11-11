@@ -16,8 +16,8 @@ ctx.beginPath();
 ctx.arc(150, 100, 50, 0, Math.PI, true);
 ctx.moveTo(50, 100);
 ctx.lineTo(50, 100);
-ctx.stroke();
 ctx.fill();
+ctx.stroke();
 
 
 ctx.beginPath();
