@@ -21,7 +21,7 @@ function loadImages(sources, callback) {
 var sources = {
   darthVader:
     "http://www.html5canvastutorials.com/demos/assets/darth-vader.jpg",
-  yoda: "http://www.html5canvastutorials.com/demos/assets/yoda.jpg",
+  vaca: "https://lh3.googleusercontent.com/proxy/EnpLxPWzdg-CeX62o233JnKEOF8FZQ07ZewamEPvKKp3YbXHe7QqUbeptSuVhJJIjgB6QB8t6LupK_catddJk3pj1LiqUHxrUpGzFIfWj06RshSqprj4fzt7aKy9zGl25dIvbVRYLCI",
   soccerBall:
     "https://upload.wikimedia.org/wikipedia/commons/d/d3/Soccerball.svg",
 };
@@ -30,38 +30,26 @@ let y = 60;
 let vX = 50;
 let vY = 75;
 let dT = 0.03;
-// let t = 0;
-// coordenadas del objeto que controla el usuario
 let x2 = 200;
 let y2 = 200;
-// let angle2 = 0
 function draw(images) {
-  // t += 0.03;
-  x = x + vX * dT; // 50 + 10*0.03 = 50.3
-  y = y + vY * dT; // 50 + 10*0.03 = 50.3
-  // Si está chocando con alguna pared, entonces cambiar de signo la velocidad
-  // choque con la pared inferior
-  if (400 - y < 15) vY = -vY;
-  // choque con la pared de la derecha
-  if (400 - x < 15) vX = -vX;
-  // choque con la pared superior
+  x = x + vX * dT; 
+  y = y + vY * dT; 
+  if (300 - y < 15) vY = -vY;
+  if (600 - x < 15) vX = -vX;
   if (y - 0 < 15) vY = -vY;
-  ctx.clearRect(0, 0, 400, 400);
-  ctx.drawImage(images.yoda, x2, y2, 60, 60);
+  ctx.clearRect(0, 0, 600, 300);
+  ctx.drawImage(images.vaca, x2, y2, 150, 150);
   ctx.drawImage(images.soccerBall, x - 15, y - 15, 30, 30);
-  // ctx.drawImage(images.yoda, 200, 200, 50, 50);
 }
-// La variable images contiene las imagenes cargadas
 function run(images) {
-  //  La función draw se va a ejecutar cada 30 ms, es decir
-  // 1000/30 = 33.333 veces por segundo
+  
   window.setInterval(function () {
     draw(images);
   }, 30);
-  //   ctx.drawImage(images.soccerBall, 200, 20, 30, 30);
-  //   ctx.drawImage(images.yoda, 200, 0, 200, 400);
+ 
 }
-// la funcion run se ejecuta cuando las imagenes acaban de cargar.
+
 loadImages(sources, run);
 
 window.onkeydown = function (evento) {
