@@ -1,5 +1,5 @@
 import {IMAGES as images} from './initialize.js'
-import {ctx, drawObj, run, start, dT} from './initialize.js'
+import {ctx,canvas, drawObj, run, start, dT} from './initialize.js'
 
 let balones = []
 let Balon = {
@@ -31,9 +31,10 @@ drawObj.draw = function(){
 run()
 function crearParticula(hola){
     let nuevoBalon = Object.create(Balon)
+   
     //asignar x, y, vX y vY
-    nuevoBalon.x = hola.offsetX 
-    nuevoBalon.y = hola.offsetY
+    nuevoBalon.x = (hola.offsetX)
+    nuevoBalon.y = (hola.offsetY)
     // Genero el angulo de manera aleatoria
     // Math.random genera un numero aleatorio entre 0 y 1
     let ang = 2 * Math.PI * Math.random()
@@ -43,7 +44,8 @@ function crearParticula(hola){
 
     // añado el nuevo balón al array de balones
     balones.push(nuevoBalon)
-    console.log(hola.offsetX,hola.offsetY)
+    
+    
 }
 
 // Al hacer click se va a ejecutar la función crear partícula
